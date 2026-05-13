@@ -37,10 +37,3 @@ src/
 └── index.css           → Estilos globales
 ```
 
-### Conceptos implementados
-- BrowserRouter + Routes + Route + NavLink (Paso 2)
-- Axios + async/await + AbortController en useEffect (Paso 3)
-- Renderizado iterativo (.map() con key={user.id}) (Paso 4)
-- Renderizado condicional (&& y ternario) (Paso 4)
-- Formulario controlado con useState + validación (Paso 4)
-- Custom hook useUsers que encapsula fetch (Paso 5)
