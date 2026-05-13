@@ -8,6 +8,9 @@ function Home() {
         Aplicación de una sola página (SPA) construida con React + Vite +
         React Router DOM + Axios. Navega usando el menú superior.
       </p>
+      <p style={{ marginBottom: '24px', color: '#555' }}>
+        ESTUDIANTE: NAVARRO SERVA, LESLY BRENDA
+      </p>
 
       {/* Renderizado condicional simple con && */}
       {true && (
