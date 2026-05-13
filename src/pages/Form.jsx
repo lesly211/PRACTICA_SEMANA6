@@ -1,30 +1,19 @@
 import { useState } from 'react'
-
-// Paso 4: Formulario controlado con useState
-// Cada input tiene su valor ligado al estado y actualiza con onChange
 function Form() {
-  // Estado del formulario (controlled inputs)
   const [form, setForm] = useState({
     nombre: '',
     email: '',
     mensaje: '',
   })
 
-  // Mensaje de éxito tras enviar
   const [enviado, setEnviado] = useState(false)
-
-  // Errores de validación
   const [errores, setErrores] = useState({})
 
-  // Handler genérico para todos los inputs (reutilizable)
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm((prev) => ({ ...prev, [name]: value }))
-    // Limpiar error del campo al escribir
     setErrores((prev) => ({ ...prev, [name]: '' }))
   }
-
-  // Validación básica
   const validar = () => {
     const nuevosErrores = {}
     if (!form.nombre.trim()) nuevosErrores.nombre = 'El nombre es requerido.'
@@ -32,8 +21,6 @@ function Form() {
     if (!form.mensaje.trim()) nuevosErrores.mensaje = 'El mensaje no puede estar vacío.'
     return nuevosErrores
   }
-
-  // Handler del submit
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -43,11 +30,10 @@ function Form() {
       return
     }
 
-    // Aquí iría la petición POST con axios en un caso real
+    
     console.log('Formulario enviado:', form)
     setEnviado(true)
 
-    // Resetear formulario
     setForm({ nombre: '', email: '', mensaje: '' })
   }
 
@@ -92,7 +78,7 @@ function Form() {
 
       {/* Renderizado condicional: mensaje de éxito con ternario */}
       {enviado
-        ? <p className="success">✅ ¡Formulario enviado correctamente!</p>
+        ? <p className="success"> ¡Formulario enviado !!</p>
         : null
       }
     </div>

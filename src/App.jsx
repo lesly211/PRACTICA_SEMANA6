@@ -5,7 +5,6 @@ import List from './pages/List'
 import Form from './pages/Form'
 import NotFound from './pages/NotFound'
 
-// Paso 2: Configurar enrutamiento con BrowserRouter (NO HashRouter)
 function App() {
   return (
     <BrowserRouter>

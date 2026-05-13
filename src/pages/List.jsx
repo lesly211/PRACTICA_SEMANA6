@@ -1,6 +1,5 @@
 import useUsers from '../hooks/useUsers'
 
-// Componente tarjeta individual (separado para reutilización)
 function UserCard({ user }) {
   return (
     <div className="card">
@@ -11,7 +10,6 @@ function UserCard({ user }) {
   )
 }
 
-// Paso 3 y 4: Consumo de API + renderizado iterativo y condicional
 function List() {
   const { data: users, loading, error } = useUsers()
 
@@ -23,10 +21,10 @@ function List() {
       </p>
 
       {/* Renderizado condicional: estado de carga */}
-      {loading && <p className="loading">⏳ Cargando usuarios...</p>}
+      {loading && <p className="loading">Cargando usuarios...</p>}
 
       {/* Renderizado condicional: estado de error */}
-      {error && <p className="error">⚠️ {error}</p>}
+      {error && <p className="error"> {error}</p>}
 
       {/* Renderizado condicional + iterativo: lista de usuarios */}
       {/* Usamos user.id como key (único y estable, NO el index) */}
